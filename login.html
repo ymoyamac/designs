@@ -1,0 +1,150 @@
+<div class="min-h-screen bg-[#1E1B2E] flex items-center justify-center p-6">
+
+  <div
+    class="w-full max-w-7xl rounded-3xl overflow-hidden bg-[#2A243D] shadow-2xl grid grid-cols-1 lg:grid-cols-2"
+  >
+
+    <!-- Left Side -->
+    <div class="relative hidden lg:block">
+
+      <img
+        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
+        alt="background"
+        class="h-full w-full object-cover"
+      />
+
+      <div class="absolute inset-0 bg-purple-900/40"></div>
+
+      <div class="absolute top-6 left-6">
+        <h1 class="text-4xl font-bold text-white tracking-wider">
+          AMU
+        </h1>
+      </div>
+
+      <div class="absolute bottom-16 left-16 text-white">
+        <h2 class="text-5xl font-light leading-tight">
+          Capturing Moments,
+          <br />
+          Creating Memories
+        </h2>
+      </div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div class="flex items-center justify-center p-10 lg:p-20">
+
+      <div class="w-full max-w-md">
+
+        <div class="mb-10">
+          <h1 class="text-5xl font-semibold text-white mb-3">
+            Welcome Back
+          </h1>
+
+          <p class="text-gray-400">
+            Please login to continue
+          </p>
+        </div>
+
+        <form
+          [formGroup]="loginForm"
+          (ngSubmit)="onSubmit()"
+          class="space-y-6"
+        >
+
+          <!-- Email -->
+          <div>
+
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Email"
+              class="input input-bordered w-full bg-[#3A3450] border-[#4B4563] text-white focus:outline-none focus:border-primary"
+            />
+
+            @if (email.touched && email.invalid) {
+              <p class="text-error text-sm mt-2">
+                Enter a valid email
+              </p>
+            }
+
+          </div>
+
+          <!-- Password -->
+          <div>
+
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Password"
+              class="input input-bordered w-full bg-[#3A3450] border-[#4B4563] text-white focus:outline-none focus:border-primary"
+            />
+
+            @if (password.touched && password.invalid) {
+              <p class="text-error text-sm mt-2">
+                Password is required
+              </p>
+            }
+
+          </div>
+
+          <!-- Remember -->
+          <div class="flex items-center justify-between text-sm">
+
+            <label class="label cursor-pointer gap-3">
+
+              <input
+                type="checkbox"
+                class="checkbox checkbox-primary checkbox-sm"
+              />
+
+              <span class="text-gray-300">
+                Remember me
+              </span>
+
+            </label>
+
+            <a
+              class="text-primary hover:underline"
+              href="#"
+            >
+              Forgot password?
+            </a>
+
+          </div>
+
+          <!-- Button -->
+          <button
+            type="submit"
+            class="btn btn-primary w-full text-white"
+          >
+            Login
+          </button>
+
+        </form>
+
+        <!-- Divider -->
+        <div class="divider text-gray-500 my-8">
+          OR
+        </div>
+
+        <!-- Social -->
+        <div class="grid grid-cols-2 gap-4">
+
+          <button class="btn bg-[#3A3450] border-[#4B4563] text-white hover:bg-[#4B4563]">
+            Google
+          </button>
+
+          <button class="btn bg-[#3A3450] border-[#4B4563] text-white hover:bg-[#4B4563]">
+            GitHub
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
