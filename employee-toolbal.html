@@ -1,0 +1,65 @@
+<section
+  class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+>
+  <!-- Title -->
+  <div>
+    <h2 class="text-2xl font-bold text-text-base">
+      Directorio de Empleados
+    </h2>
+
+    <p class="mt-1 text-sm text-text-muted">
+      Gestiona y visualiza tu equipo de trabajo
+    </p>
+  </div>
+
+  <!-- Actions -->
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+    <!-- Search -->
+    <label
+      class="flex items-center gap-3 rounded-2xl border border-border-theme bg-surface px-4 py-3"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4 text-text-muted"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
+        />
+      </svg>
+
+      <input
+        type="text"
+        placeholder="Buscar empleados..."
+        class="w-64 bg-transparent text-sm text-text-base placeholder:text-text-muted focus:outline-none"
+      />
+    </label>
+
+    <!-- Add Button -->
+    <button
+      class="flex items-center justify-center gap-2 rounded-2xl bg-primary-theme px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-4 w-4"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 4v16m8-8H4"
+        />
+      </svg>
+
+      Agregar
+    </button>
+  </div>
+</section>
