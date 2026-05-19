@@ -1,46 +1,63 @@
-<nav class="bg-[#0b1120] px-8 py-6">
-  <div
-    class="flex items-center justify-between rounded-3xl bg-[#111827] px-10 py-6"
-  >
-    <!-- Logo -->
-    <div>
+<nav
+  class="sticky top-0 z-50 border-b border-white/5 bg-[#050816]/95 px-6 py-4 backdrop-blur"
+>
+  <div class="flex items-center justify-between">
+    <!-- Left -->
+    <div class="flex items-center gap-10">
+      <!-- Logo -->
       <button
-        class="rounded-2xl border border-zinc-700 bg-zinc-800 px-8 py-4 text-3xl font-bold text-zinc-100 transition hover:bg-zinc-700"
+        class="rounded-2xl border border-white/10 bg-[#111827] px-5 py-2.5 text-md font-semibold text-zinc-100 transition hover:border-emerald-500/30 hover:bg-[#182234]"
       >
         Logo
       </button>
+
+      <!-- Navigation -->
+      <div class="flex items-center gap-8">
+        <a
+          href="#"
+          class="group relative text-sm font-medium text-zinc-400 transition hover:text-emerald-400"
+        >
+          Dashboard
+
+          <span
+            class="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-emerald-400 transition-all duration-300 group-hover:w-full"
+          ></span>
+        </a>
+
+        <a
+          href="#"
+          class="group relative text-sm font-medium text-emerald-400"
+        >
+          Solicitud
+
+          <span
+            class="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-emerald-400"
+          ></span>
+        </a>
+
+        <a
+          href="#"
+          class="group relative text-sm font-medium text-zinc-400 transition hover:text-emerald-400"
+        >
+          Empleados
+
+          <span
+            class="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-emerald-400 transition-all duration-300 group-hover:w-full"
+          ></span>
+        </a>
+      </div>
     </div>
 
-    <!-- Navigation -->
-    <div class="flex items-center gap-12">
-      <a
-        href="#"
-        class="relative text-3xl font-medium text-zinc-300 transition duration-200 hover:text-emerald-400"
-      >
-        Solicitud
-
-        <span
-          class="absolute -bottom-2 left-0 h-[3px] w-0 rounded-full bg-emerald-400 transition-all duration-300 hover:w-full"
-        ></span>
-      </a>
-    </div>
-
-    <!-- Actions -->
-    <div class="flex items-center gap-6">
-      <!-- Theme toggle -->
-      <label class="relative inline-flex cursor-pointer items-center">
-        <input type="checkbox" class="peer sr-only" />
-
-        <div
-          class="peer h-14 w-24 rounded-full border border-zinc-600 bg-zinc-700 transition peer-checked:border-emerald-400 peer-checked:bg-emerald-200"
-        ></div>
-
-        <div
-          class="absolute left-2 flex h-10 w-10 items-center justify-center rounded-full bg-zinc-500 text-white transition-all peer-checked:left-12 peer-checked:bg-emerald-500"
+    <!-- Right -->
+    <div class="flex items-center gap-4">
+      <!-- Search -->
+      <div class="hidden md:flex">
+        <label
+          class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#111827] px-4 py-2.5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
+            class="h-4 w-4 text-zinc-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -49,28 +66,49 @@
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999A5.002 5.002 0 006 9a4 4 0 00-3 6z"
+              d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
-        </div>
+
+          <input
+            type="text"
+            placeholder="Buscar..."
+            class="bg-transparent text-sm text-zinc-200 placeholder:text-zinc-500 focus:outline-none"
+          />
+        </label>
+      </div>
+
+      <!-- Theme Toggle -->
+      <label class="relative inline-flex cursor-pointer items-center">
+        <input type="checkbox" class="peer sr-only" />
+
+        <!-- Track -->
+        <div
+          class="h-7 w-12 rounded-full border border-white/10 bg-[#1f2937] transition peer-checked:border-emerald-500/30 peer-checked:bg-emerald-500/20"
+        ></div>
+
+        <!-- Thumb -->
+        <div
+          class="absolute left-1 h-5 w-5 rounded-full bg-zinc-400 transition-all peer-checked:left-6 peer-checked:bg-emerald-400"
+        ></div>
       </label>
 
-      <!-- Profile dropdown -->
+      <!-- Profile Dropdown -->
       <div class="dropdown dropdown-end">
         <button
           tabindex="0"
-          class="flex h-18 w-18 items-center justify-center rounded-full bg-emerald-500 text-3xl font-bold text-white transition hover:bg-emerald-400"
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500 text-sm font-bold text-white transition hover:bg-emerald-400"
         >
           CM
         </button>
 
         <ul
           tabindex="0"
-          class="menu dropdown-content z-[1] mt-4 w-64 rounded-2xl border border-zinc-700 bg-[#1f2937] p-3 shadow-xl"
+          class="menu dropdown-content z-[1] mt-3 w-52 rounded-2xl border border-white/10 bg-[#111827] p-2 shadow-2xl"
         >
           <li>
             <a
-              class="rounded-xl px-4 py-3 text-lg text-zinc-200 hover:bg-zinc-700 hover:text-emerald-400"
+              class="rounded-xl px-3 py-2 text-sm text-zinc-200 hover:bg-[#1f2937] hover:text-emerald-400"
             >
               Mi perfil
             </a>
@@ -78,7 +116,7 @@
 
           <li>
             <a
-              class="rounded-xl px-4 py-3 text-lg text-red-400 hover:bg-red-500/10"
+              class="rounded-xl px-3 py-2 text-sm text-red-400 hover:bg-red-500/10"
             >
               Cerrar sesión
             </a>
