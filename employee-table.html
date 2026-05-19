@@ -1,0 +1,222 @@
+<div
+  class="overflow-hidden rounded-3xl border border-border-theme bg-base"
+>
+  <!-- Table Header -->
+  <div
+    class="border-b border-border-theme bg-surface px-6 py-4"
+  >
+    <h2 class="text-lg font-semibold text-text-base">
+      Empleados
+    </h2>
+
+    <p class="mt-1 text-sm text-text-muted">
+      Lista general de empleados registrados
+    </p>
+  </div>
+
+  <!-- Table -->
+  <div class="overflow-x-auto">
+    <table class="min-w-full border-collapse">
+      <thead>
+        <tr class="border-b border-border-theme">
+          <th
+            class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wide text-text-muted"
+          >
+            Empleado
+          </th>
+
+          <th
+            class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wide text-text-muted"
+          >
+            Departamento
+          </th>
+
+          <th
+            class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wide text-text-muted"
+          >
+            Estado
+          </th>
+
+          <th
+            class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wide text-text-muted"
+          >
+            Correo
+          </th>
+
+          <th
+            class="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wide text-text-muted"
+          >
+            Ubicación
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Row -->
+        <tr
+          class="border-b border-border-theme transition hover:bg-surface"
+        >
+          <!-- Employee -->
+          <td class="px-6 py-5">
+            <div class="flex items-center gap-4">
+              <!-- Avatar -->
+              <div class="relative">
+                <div
+                  class="flex h-11 w-11 items-center justify-center rounded-full bg-primary-theme/15 text-sm font-semibold text-primary-theme"
+                >
+                  AG
+                </div>
+
+                <span
+                  class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-base bg-primary-theme"
+                ></span>
+              </div>
+
+              <!-- Info -->
+              <div>
+                <p class="text-sm font-semibold text-text-base">
+                  Ana García
+                </p>
+
+                <p class="text-xs text-text-muted">
+                  Diseñadora UX
+                </p>
+              </div>
+            </div>
+          </td>
+
+          <!-- Department -->
+          <td class="px-6 py-5">
+            <p class="text-sm text-text-muted">
+              Diseño
+            </p>
+          </td>
+
+          <!-- Status -->
+          <td class="px-6 py-5">
+            <span
+              class="rounded-full bg-primary-theme/15 px-3 py-1 text-xs font-medium text-primary-theme"
+            >
+              Activo
+            </span>
+          </td>
+
+          <!-- Email -->
+          <td class="px-6 py-5">
+            <p class="text-sm text-text-muted">
+              ana.garcia@empresa.com
+            </p>
+          </td>
+
+          <!-- Location -->
+          <td class="px-6 py-5">
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-primary-theme"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+
+              <p class="text-sm text-text-muted">
+                Ciudad de México
+              </p>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Row -->
+        <tr
+          class="border-b border-border-theme transition hover:bg-surface"
+        >
+          <td class="px-6 py-5">
+            <div class="flex items-center gap-4">
+              <div class="relative">
+                <div
+                  class="flex h-11 w-11 items-center justify-center rounded-full bg-primary-theme/15 text-sm font-semibold text-primary-theme"
+                >
+                  CR
+                </div>
+
+                <span
+                  class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-base bg-yellow-400"
+                ></span>
+              </div>
+
+              <div>
+                <p class="text-sm font-semibold text-text-base">
+                  Carlos Ruiz
+                </p>
+
+                <p class="text-xs text-text-muted">
+                  Backend Developer
+                </p>
+              </div>
+            </div>
+          </td>
+
+          <td class="px-6 py-5">
+            <p class="text-sm text-text-muted">
+              Ingeniería
+            </p>
+          </td>
+
+          <td class="px-6 py-5">
+            <span
+              class="rounded-full bg-yellow-500/15 px-3 py-1 text-xs font-medium text-yellow-400"
+            >
+              Ausente
+            </span>
+          </td>
+
+          <td class="px-6 py-5">
+            <p class="text-sm text-text-muted">
+              carlos.ruiz@empresa.com
+            </p>
+          </td>
+
+          <td class="px-6 py-5">
+            <div class="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-primary-theme"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+
+              <p class="text-sm text-text-muted">
+                Monterrey, MX
+              </p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
