@@ -1,12 +1,10 @@
-<nav
-  class="sticky top-0 z-50 border-b border-white/5 bg-[#050816]/95 px-6 py-4 backdrop-blur"
->
+<nav class="sticky top-0 z-50 border-b border-border-theme bg-base px-6 py-4">
   <div class="flex items-center justify-between">
     <!-- Left -->
     <div class="flex items-center gap-10">
       <!-- Logo -->
       <button
-        class="rounded-2xl border border-white/10 bg-[#111827] px-5 py-2.5 text-md font-semibold text-zinc-100 transition hover:border-emerald-500/30 hover:bg-[#182234]"
+        class="rounded-2xl border border-border-theme bg-surface px-5 py-2.5 text-md font-semibold text-text-base transition hover:bg-surface/80"
       >
         Logo
       </button>
@@ -15,34 +13,34 @@
       <div class="flex items-center gap-8">
         <a
           href="#"
-          class="group relative text-sm font-medium text-zinc-400 transition hover:text-emerald-400"
+          class="group relative text-sm font-medium text-text-muted transition hover:text-primary-theme"
         >
           Dashboard
 
           <span
-            class="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-emerald-400 transition-all duration-300 group-hover:w-full"
+            class="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-primary-theme transition-all duration-300 group-hover:w-full"
           ></span>
         </a>
 
         <a
           href="#"
-          class="group relative text-sm font-medium text-emerald-400"
+          class="group relative text-sm font-medium text-primary-theme"
         >
           Solicitud
 
           <span
-            class="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-emerald-400"
+            class="absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-primary-theme"
           ></span>
         </a>
 
         <a
           href="#"
-          class="group relative text-sm font-medium text-zinc-400 transition hover:text-emerald-400"
+          class="group relative text-sm font-medium text-text-muted transition hover:text-primary-theme"
         >
           Empleados
 
           <span
-            class="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-emerald-400 transition-all duration-300 group-hover:w-full"
+            class="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-primary-theme transition-all duration-300 group-hover:w-full"
           ></span>
         </a>
       </div>
@@ -53,11 +51,11 @@
       <!-- Search -->
       <div class="hidden md:flex">
         <label
-          class="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#111827] px-4 py-2.5"
+          class="flex items-center gap-3 rounded-2xl border border-border-theme bg-surface px-4 py-2.5"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-4 w-4 text-zinc-500"
+            class="h-4 w-4 text-text-muted"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -73,23 +71,28 @@
           <input
             type="text"
             placeholder="Buscar..."
-            class="bg-transparent text-sm text-zinc-200 placeholder:text-zinc-500 focus:outline-none"
+            class="bg-transparent text-sm text-text-base placeholder:text-text-muted focus:outline-none"
           />
         </label>
       </div>
 
       <!-- Theme Toggle -->
       <label class="relative inline-flex cursor-pointer items-center">
-        <input type="checkbox" class="peer sr-only" />
+        <input
+          type="checkbox"
+          class="peer sr-only"
+          [checked]="themeService.isDarkMode()"
+          (change)="toggleTheme()"
+        />
 
         <!-- Track -->
         <div
-          class="h-7 w-12 rounded-full border border-white/10 bg-[#1f2937] transition peer-checked:border-emerald-500/30 peer-checked:bg-emerald-500/20"
+          class="h-7 w-12 rounded-full border border-border-theme bg-surface transition peer-checked:bg-primary-theme/20"
         ></div>
 
         <!-- Thumb -->
         <div
-          class="absolute left-1 h-5 w-5 rounded-full bg-zinc-400 transition-all peer-checked:left-6 peer-checked:bg-emerald-400"
+          class="absolute left-1 h-5 w-5 rounded-full bg-text-muted transition-all peer-checked:left-6 peer-checked:bg-primary-theme"
         ></div>
       </label>
 
@@ -97,18 +100,18 @@
       <div class="dropdown dropdown-end">
         <button
           tabindex="0"
-          class="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500 text-sm font-bold text-white transition hover:bg-emerald-400"
+          class="flex h-11 w-11 items-center justify-center rounded-full bg-primary-theme text-sm font-bold text-white transition hover:opacity-90"
         >
           CM
         </button>
 
         <ul
           tabindex="0"
-          class="menu dropdown-content z-[1] mt-3 w-52 rounded-2xl border border-white/10 bg-[#111827] p-2 shadow-2xl"
+          class="menu dropdown-content z-[1] mt-3 w-52 rounded-2xl border border-border-theme bg-surface p-2 shadow-2xl"
         >
           <li>
             <a
-              class="rounded-xl px-3 py-2 text-sm text-zinc-200 hover:bg-[#1f2937] hover:text-emerald-400"
+              class="rounded-xl px-3 py-2 text-sm text-text-base hover:bg-base hover:text-primary-theme"
             >
               Mi perfil
             </a>
