@@ -1,38 +1,30 @@
 <section
   class="flex min-h-screen items-center justify-center bg-background px-6 py-10"
+  data-theme="light"
 >
   <div
-    class="grid w-full max-w-6xl overflow-hidden rounded-3xl border border-border-theme bg-base lg:grid-cols-2"
+    class="grid w-full max-w-5xl overflow-hidden rounded-3xl border border-border-theme bg-base shadow-xl lg:grid-cols-2"
   >
     <!-- Left Side -->
     <div
-      class="hidden flex-col justify-between bg-surface p-12 lg:flex"
+      class="hidden flex-col justify-center bg-primary-theme px-12 py-14 lg:flex"
     >
       <div>
         <div
-          class="inline-flex rounded-2xl bg-primary-theme px-4 py-2 text-sm font-bold text-white"
+          class="inline-flex rounded-2xl bg-white/15 px-4 py-2 text-sm font-semibold text-white"
         >
-          EMPLOYEE PORTAL
+          Employee Portal
         </div>
 
         <h1
-          class="mt-8 text-4xl font-bold leading-tight text-text-base"
+          class="mt-8 text-4xl font-bold leading-tight text-white"
         >
-          Crea tu cuenta empresarial
+          Bienvenido de nuevo
         </h1>
 
-        <p class="mt-5 text-md leading-relaxed text-text-muted">
-          Registra usuarios autorizados para gestionar
-          solicitudes y procesos internos de la empresa.
-        </p>
-      </div>
-
-      <div
-        class="rounded-3xl border border-border-theme bg-base p-6"
-      >
-        <p class="text-sm text-text-muted">
-          Seguridad empresarial integrada con control de acceso
-          y autenticación moderna.
+        <p class="mt-5 text-md leading-relaxed text-white/80">
+          Accede a tu cuenta para continuar gestionando tus
+          solicitudes y operaciones.
         </p>
       </div>
     </div>
@@ -43,37 +35,22 @@
         <!-- Header -->
         <div>
           <h2 class="text-3xl font-bold text-text-base">
-            Crear cuenta
+            Iniciar sesión
           </h2>
 
           <p class="mt-2 text-sm text-text-muted">
-            Registra un nuevo usuario empresarial
+            Ingresa tus credenciales
           </p>
         </div>
 
         <!-- Form -->
         <form class="mt-8 space-y-5">
-          <!-- Name -->
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-base"
-            >
-              Nombre completo
-            </label>
-
-            <input
-              type="text"
-              placeholder="Carlos Mendoza"
-              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
-            />
-          </div>
-
           <!-- Email -->
           <div>
             <label
               class="mb-2 block text-sm font-medium text-text-base"
             >
-              Correo empresarial
+              Correo
             </label>
 
             <input
@@ -98,19 +75,25 @@
             />
           </div>
 
-          <!-- Confirm Password -->
-          <div>
+          <!-- Actions -->
+          <div class="flex items-center justify-between">
             <label
-              class="mb-2 block text-sm font-medium text-text-base"
+              class="flex items-center gap-2 text-sm text-text-muted"
             >
-              Confirmar contraseña
+              <input
+                type="checkbox"
+                class="h-4 w-4 rounded border-border-theme"
+              />
+
+              Recordarme
             </label>
 
-            <input
-              type="password"
-              placeholder="••••••••"
-              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
-            />
+            <a
+              href="#"
+              class="text-sm font-medium text-primary-theme hover:underline"
+            >
+              Recuperar acceso
+            </a>
           </div>
 
           <!-- Submit -->
@@ -118,19 +101,19 @@
             type="submit"
             class="w-full rounded-2xl bg-primary-theme px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
           >
-            Crear cuenta
+            Ingresar
           </button>
         </form>
 
         <!-- Footer -->
         <p class="mt-6 text-center text-sm text-text-muted">
-          ¿Ya tienes cuenta?
+          ¿No tienes cuenta?
 
           <a
             href="#"
             class="font-medium text-primary-theme hover:underline"
           >
-            Iniciar sesión
+            Registrarse
           </a>
         </p>
       </div>
