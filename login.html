@@ -1,227 +1,132 @@
-<!-- login-page.component.html -->
-
-<div class="min-h-screen bg-[#1E1B2E] flex items-center justify-center p-6">
-
+<section
+  class="flex min-h-screen items-center justify-center bg-background px-6 py-10"
+>
   <div
-    class="w-full max-w-md bg-[#2A243D] border border-[#3D3657] rounded-3xl p-8 shadow-2xl"
+    class="grid w-full max-w-6xl overflow-hidden rounded-3xl border border-border-theme bg-base lg:grid-cols-2"
   >
-
-    <!-- Header -->
-
-    <div class="mb-8 text-center">
-
-      <h1 class="text-3xl font-bold text-white">
-        Welcome Back
-      </h1>
-
-      <p class="text-gray-400 mt-2">
-        Sign in to continue
-      </p>
-
-    </div>
-
-    <!-- Form -->
-
-    <form
-      [formGroup]="loginForm"
-      (ngSubmit)="onSubmit()"
-      class="space-y-5"
+    <!-- Left Side -->
+    <div
+      class="hidden flex-col justify-between bg-surface p-12 lg:flex"
     >
-
-      <!-- Email -->
-
       <div>
-
-        <label class="label">
-
-          <span class="label-text text-gray-300">
-            Email
-          </span>
-
-        </label>
-
-        <input
-          type="email"
-          formControlName="email"
-          placeholder="john@company.com"
-          class="input input-bordered w-full bg-[#342E4C] border-[#4A4365] text-white focus:border-primary"
-        />
-
-        @if (
-          email.touched &&
-          email.hasError('required')
-        ) {
-
-          <p class="text-error text-sm mt-2">
-            Email is required
-          </p>
-
-        }
-
-        @if (
-          email.touched &&
-          email.hasError('email')
-        ) {
-
-          <p class="text-error text-sm mt-2">
-            Invalid email format
-          </p>
-
-        }
-
-      </div>
-
-      <!-- Password -->
-
-      <div>
-
-        <label class="label">
-
-          <span class="label-text text-gray-300">
-            Password
-          </span>
-
-        </label>
-
-        <div class="relative">
-
-          <input
-            [type]="showPassword() ? 'text' : 'password'"
-            formControlName="password"
-            placeholder="••••••••"
-            class="input input-bordered w-full pr-14 bg-[#342E4C] border-[#4A4365] text-white focus:border-primary"
-          />
-
-          <button
-            type="button"
-            class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition"
-            (click)="togglePasswordVisibility()"
-          >
-
-            @if (!showPassword()) {
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.964-7.178z"
-                />
-
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
-
-            } @else {
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 3l18 18"
-                />
-
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.477 10.488a3 3 0 004.242 4.243"
-                />
-              </svg>
-
-            }
-
-          </button>
-
+        <div
+          class="inline-flex rounded-2xl bg-primary-theme px-4 py-2 text-sm font-bold text-white"
+        >
+          EMPLOYEE PORTAL
         </div>
 
-        @if (
-          password.touched &&
-          password.hasError('required')
-        ) {
+        <h1
+          class="mt-8 text-4xl font-bold leading-tight text-text-base"
+        >
+          Gestiona solicitudes y accesos empresariales
+        </h1>
 
-          <p class="text-error text-sm mt-2">
-            Password is required
-          </p>
-
-        }
-
-        @if (
-          password.touched &&
-          password.hasError('minlength')
-        ) {
-
-          <p class="text-error text-sm mt-2">
-            Minimum 8 characters
-          </p>
-
-        }
-
+        <p class="mt-5 text-md leading-relaxed text-text-muted">
+          Plataforma centralizada para administrar solicitudes
+          de bajas, bloqueos de acceso y control de cuentas
+          empresariales.
+        </p>
       </div>
 
-      <!-- Submit -->
-
-      <button
-        type="submit"
-        class="btn btn-primary w-full mt-4"
-        [disabled]="
-          loginForm.invalid ||
-          loading()
-        "
+      <!-- Bottom -->
+      <div
+        class="rounded-3xl border border-border-theme bg-base p-6"
       >
-
-        @if (loading()) {
-
-          <span
-            class="loading loading-spinner loading-sm"
-          ></span>
-
-        } @else {
-
-          <span>
-            Sign In
-          </span>
-
-        }
-
-      </button>
-
-    </form>
-
-    <!-- Footer -->
-
-    <div class="mt-8 text-center">
-
-      <p class="text-gray-400 text-sm">
-
-        Don't have an account?
-
-        <a
-          routerLink="/register"
-          class="text-primary hover:text-primary-focus font-medium ml-1"
-        >
-          Create account
-        </a>
-
-      </p>
-
+        <p class="text-sm text-text-muted">
+          Sistema seguro de administración empresarial con
+          autenticación JWT y monitoreo centralizado.
+        </p>
+      </div>
     </div>
 
-  </div>
+    <!-- Right Side -->
+    <div class="flex items-center justify-center p-8 lg:p-14">
+      <div class="w-full max-w-md">
+        <!-- Header -->
+        <div>
+          <h2 class="text-3xl font-bold text-text-base">
+            Iniciar sesión
+          </h2>
 
-</div>
+          <p class="mt-2 text-sm text-text-muted">
+            Accede a tu cuenta empresarial
+          </p>
+        </div>
+
+        <!-- Form -->
+        <form class="mt-8 space-y-5">
+          <!-- Email -->
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-text-base"
+            >
+              Correo empresarial
+            </label>
+
+            <input
+              type="email"
+              placeholder="correo@empresa.com"
+              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+            />
+          </div>
+
+          <!-- Password -->
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-text-base"
+            >
+              Contraseña
+            </label>
+
+            <input
+              type="password"
+              placeholder="••••••••"
+              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+            />
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center justify-between">
+            <label
+              class="flex items-center gap-2 text-sm text-text-muted"
+            >
+              <input
+                type="checkbox"
+                class="h-4 w-4 rounded border-border-theme bg-surface"
+              />
+
+              Recordarme
+            </label>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-primary-theme hover:underline"
+            >
+              ¿Olvidaste tu contraseña?
+            </a>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="w-full rounded-2xl bg-primary-theme px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+          >
+            Ingresar
+          </button>
+        </form>
+
+        <!-- Footer -->
+        <p class="mt-6 text-center text-sm text-text-muted">
+          ¿No tienes cuenta?
+
+          <a
+            href="#"
+            class="font-medium text-primary-theme hover:underline"
+          >
+            Crear cuenta
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
