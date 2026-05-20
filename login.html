@@ -1,66 +1,47 @@
 <section
   class="flex min-h-screen items-center justify-center bg-background px-6 py-10"
+  data-theme="light"
 >
   <div
-    class="grid w-full max-w-6xl overflow-hidden rounded-3xl border border-border-theme bg-base lg:grid-cols-2"
+    class="grid w-full max-w-5xl overflow-hidden rounded-3xl border border-border-theme bg-base shadow-xl lg:grid-cols-2"
   >
-    <!-- Left Side -->
-    <div
-      class="hidden flex-col justify-between bg-surface p-12 lg:flex"
-    >
-      <div>
-        <div
-          class="inline-flex rounded-2xl bg-primary-theme px-4 py-2 text-sm font-bold text-white"
-        >
-          EMPLOYEE PORTAL
-        </div>
-
-        <h1
-          class="mt-8 text-4xl font-bold leading-tight text-text-base"
-        >
-          Gestiona solicitudes y accesos empresariales
-        </h1>
-
-        <p class="mt-5 text-md leading-relaxed text-text-muted">
-          Plataforma centralizada para administrar solicitudes
-          de bajas, bloqueos de acceso y control de cuentas
-          empresariales.
-        </p>
-      </div>
-
-      <!-- Bottom -->
-      <div
-        class="rounded-3xl border border-border-theme bg-base p-6"
-      >
-        <p class="text-sm text-text-muted">
-          Sistema seguro de administración empresarial con
-          autenticación JWT y monitoreo centralizado.
-        </p>
-      </div>
-    </div>
-
-    <!-- Right Side -->
+    <!-- Left Side / Form -->
     <div class="flex items-center justify-center p-8 lg:p-14">
       <div class="w-full max-w-md">
         <!-- Header -->
         <div>
           <h2 class="text-3xl font-bold text-text-base">
-            Iniciar sesión
+            Crear cuenta
           </h2>
 
           <p class="mt-2 text-sm text-text-muted">
-            Accede a tu cuenta empresarial
+            Completa tu información para continuar
           </p>
         </div>
 
         <!-- Form -->
         <form class="mt-8 space-y-5">
+          <!-- Name -->
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-text-base"
+            >
+              Nombre completo
+            </label>
+
+            <input
+              type="text"
+              placeholder="Carlos Mendoza"
+              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+            />
+          </div>
+
           <!-- Email -->
           <div>
             <label
               class="mb-2 block text-sm font-medium text-text-base"
             >
-              Correo empresarial
+              Correo
             </label>
 
             <input
@@ -85,47 +66,135 @@
             />
           </div>
 
-          <!-- Actions -->
-          <div class="flex items-center justify-between">
+          <!-- Confirm Password -->
+          <div>
             <label
-              class="flex items-center gap-2 text-sm text-text-muted"
+              class="mb-2 block text-sm font-medium text-text-base"
             >
-              <input
-                type="checkbox"
-                class="h-4 w-4 rounded border-border-theme bg-surface"
-              />
-
-              Recordarme
+              Confirmar contraseña
             </label>
 
-            <a
-              href="#"
-              class="text-sm font-medium text-primary-theme hover:underline"
-            >
-              ¿Olvidaste tu contraseña?
-            </a>
+            <input
+              type="password"
+              placeholder="••••••••"
+              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+            />
           </div>
 
-          <!-- Submit -->
+          <!-- Register Button -->
           <button
             type="submit"
             class="w-full rounded-2xl bg-primary-theme px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
           >
-            Ingresar
+            Crear cuenta
+          </button>
+
+          <!-- Divider -->
+          <div class="relative py-2">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-border-theme"></div>
+            </div>
+
+            <div class="relative flex justify-center">
+              <span
+                class="bg-base px-4 text-sm text-text-muted"
+              >
+                o continuar con
+              </span>
+            </div>
+          </div>
+
+          <!-- Microsoft Button -->
+          <button
+            type="button"
+            class="flex w-full items-center justify-center gap-3 rounded-2xl border border-border-theme bg-surface px-5 py-3 text-sm font-medium text-text-base transition hover:border-primary-theme hover:bg-primary-theme/5"
+          >
+            <!-- Microsoft Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23 23"
+              class="h-5 w-5"
+            >
+              <path fill="#f25022" d="M1 1h10v10H1z" />
+              <path fill="#00a4ef" d="M12 1h10v10H12z" />
+              <path fill="#7fba00" d="M1 12h10v10H1z" />
+              <path fill="#ffb900" d="M12 12h10v10H12z" />
+            </svg>
+
+            Iniciar sesión con Microsoft
           </button>
         </form>
 
         <!-- Footer -->
         <p class="mt-6 text-center text-sm text-text-muted">
-          ¿No tienes cuenta?
+          ¿Ya tienes cuenta?
 
           <a
             href="#"
             class="font-medium text-primary-theme hover:underline"
           >
-            Crear cuenta
+            Iniciar sesión
           </a>
         </p>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div
+      class="hidden items-center justify-center bg-primary-theme/5 p-12 lg:flex"
+    >
+      <div
+        class="w-full max-w-md rounded-3xl border border-primary-theme bg-surface p-8"
+      >
+        <div
+          class="inline-flex rounded-2xl bg-primary-theme px-4 py-2 text-sm font-semibold text-white"
+        >
+          EMPLOYEE PORTAL
+        </div>
+
+        <h1
+          class="mt-6 text-3xl font-bold leading-tight text-text-base"
+        >
+          Bienvenido
+        </h1>
+
+        <p class="mt-4 text-sm leading-relaxed text-text-muted">
+          Plataforma empresarial para gestionar solicitudes,
+          usuarios y operaciones internas de forma centralizada.
+        </p>
+
+        <!-- Features -->
+        <div class="mt-8 space-y-4">
+          <div class="flex items-center gap-3">
+            <div
+              class="h-2 w-2 rounded-full bg-primary-theme"
+            ></div>
+
+            <p class="text-sm text-text-muted">
+              Gestión centralizada
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div
+              class="h-2 w-2 rounded-full bg-primary-theme"
+            ></div>
+
+            <p class="text-sm text-text-muted">
+              Acceso seguro
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div
+              class="h-2 w-2 rounded-full bg-primary-theme"
+            ></div>
+
+            <p class="text-sm text-text-muted">
+              Operaciones empresariales
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
