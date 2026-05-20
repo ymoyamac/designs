@@ -1,0 +1,204 @@
+<section
+  class="rounded-3xl border border-border-theme bg-base p-6"
+>
+  <!-- Header -->
+  <div>
+    <h2 class="text-2xl font-bold text-text-base">
+      Nueva Solicitud
+    </h2>
+
+    <p class="mt-1 text-sm text-text-muted">
+      Registra una nueva solicitud de baja o bloqueo
+    </p>
+  </div>
+
+  <!-- Form -->
+  <form class="mt-8 space-y-8">
+    <!-- Employee Information -->
+    <div>
+      <h3 class="text-md font-semibold text-text-base">
+        Información del empleado
+      </h3>
+
+      <div class="mt-4 grid grid-cols-1 gap-5 md:grid-cols-2">
+        <!-- Employee -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Empleado
+          </label>
+
+          <input
+            type="text"
+            placeholder="Nombre del empleado"
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+          />
+        </div>
+
+        <!-- Employee ID -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Número de empleado
+          </label>
+
+          <input
+            type="text"
+            placeholder="EMP-001"
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+          />
+        </div>
+
+        <!-- Department -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Departamento
+          </label>
+
+          <select
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base outline-none transition focus:border-primary-theme"
+          >
+            <option>Seleccionar departamento</option>
+            <option>Ingeniería</option>
+            <option>Operaciones</option>
+            <option>RH</option>
+            <option>Finanzas</option>
+          </select>
+        </div>
+
+        <!-- Position -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Puesto
+          </label>
+
+          <input
+            type="text"
+            placeholder="Backend Developer"
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Request Information -->
+    <div>
+      <h3 class="text-md font-semibold text-text-base">
+        Información de la solicitud
+      </h3>
+
+      <div class="mt-4 grid grid-cols-1 gap-5 md:grid-cols-2">
+        <!-- Request Type -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Tipo de solicitud
+          </label>
+
+          <select
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base outline-none transition focus:border-primary-theme"
+          >
+            <option>Seleccionar tipo</option>
+            <option>Baja</option>
+            <option>Bloqueo de accesos</option>
+            <option>Desactivación de cuentas</option>
+          </select>
+        </div>
+
+        <!-- Priority -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Prioridad
+          </label>
+
+          <select
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base outline-none transition focus:border-primary-theme"
+          >
+            <option>Seleccionar prioridad</option>
+            <option>Alta</option>
+            <option>Media</option>
+            <option>Baja</option>
+          </select>
+        </div>
+
+        <!-- Date -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Fecha efectiva
+          </label>
+
+          <input
+            type="date"
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base outline-none transition focus:border-primary-theme"
+          />
+        </div>
+
+        <!-- Ticket -->
+        <div>
+          <label
+            class="mb-2 block text-sm font-medium text-text-base"
+          >
+            Ticket / Referencia
+          </label>
+
+          <input
+            type="text"
+            placeholder="INC-2026-001"
+            class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Accounts -->
+    <div>
+      <h3 class="text-md font-semibold text-text-base">
+        Cuentas y accesos
+      </h3>
+
+      <div class="mt-4">
+        <label
+          class="mb-2 block text-sm font-medium text-text-base"
+        >
+          Observaciones
+        </label>
+
+        <textarea
+          rows="5"
+          placeholder="Describe las cuentas, accesos o información relevante..."
+          class="w-full resize-none rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div
+      class="flex flex-col gap-3 border-t border-border-theme pt-6 sm:flex-row sm:justify-end"
+    >
+      <button
+        type="button"
+        class="rounded-2xl border border-border-theme bg-surface px-5 py-3 text-sm font-medium text-text-base transition hover:border-primary-theme"
+      >
+        Cancelar
+      </button>
+
+      <button
+        type="submit"
+        class="rounded-2xl bg-primary-theme px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+      >
+        Generar solicitud
+      </button>
+    </div>
+  </form>
+</section>
