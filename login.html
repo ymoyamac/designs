@@ -11,31 +11,16 @@
         <!-- Header -->
         <div>
           <h2 class="text-3xl font-bold text-text-base">
-            Crear cuenta
+            Iniciar sesión
           </h2>
 
           <p class="mt-2 text-sm text-text-muted">
-            Completa tu información para continuar
+            Ingresa tus credenciales para continuar
           </p>
         </div>
 
         <!-- Form -->
         <form class="mt-8 space-y-5">
-          <!-- Name -->
-          <div>
-            <label
-              class="mb-2 block text-sm font-medium text-text-base"
-            >
-              Nombre completo
-            </label>
-
-            <input
-              type="text"
-              placeholder="Carlos Mendoza"
-              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
-            />
-          </div>
-
           <!-- Email -->
           <div>
             <label
@@ -66,27 +51,33 @@
             />
           </div>
 
-          <!-- Confirm Password -->
-          <div>
+          <!-- Actions -->
+          <div class="flex items-center justify-between">
             <label
-              class="mb-2 block text-sm font-medium text-text-base"
+              class="flex items-center gap-2 text-sm text-text-muted"
             >
-              Confirmar contraseña
+              <input
+                type="checkbox"
+                class="h-4 w-4 rounded border-border-theme"
+              />
+
+              Recordarme
             </label>
 
-            <input
-              type="password"
-              placeholder="••••••••"
-              class="w-full rounded-2xl border border-border-theme bg-surface px-4 py-3 text-sm text-text-base placeholder:text-text-muted outline-none transition focus:border-primary-theme"
-            />
+            <a
+              href="#"
+              class="text-sm font-medium text-primary-theme hover:underline"
+            >
+              Recuperar acceso
+            </a>
           </div>
 
-          <!-- Register Button -->
+          <!-- Login Button -->
           <button
             type="submit"
             class="w-full rounded-2xl bg-primary-theme px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90"
           >
-            Crear cuenta
+            Ingresar
           </button>
 
           <!-- Divider -->
@@ -127,13 +118,13 @@
 
         <!-- Footer -->
         <p class="mt-6 text-center text-sm text-text-muted">
-          ¿Ya tienes cuenta?
+          ¿No tienes cuenta?
 
           <a
             href="#"
             class="font-medium text-primary-theme hover:underline"
           >
-            Iniciar sesión
+            Registrarse
           </a>
         </p>
       </div>
@@ -155,12 +146,12 @@
         <h1
           class="mt-6 text-3xl font-bold leading-tight text-text-base"
         >
-          Bienvenido
+          Bienvenido de nuevo
         </h1>
 
         <p class="mt-4 text-sm leading-relaxed text-text-muted">
-          Plataforma empresarial para gestionar solicitudes,
-          usuarios y operaciones internas de forma centralizada.
+          Accede a la plataforma para continuar con tus
+          operaciones y solicitudes empresariales.
         </p>
 
         <!-- Features -->
@@ -171,7 +162,7 @@
             ></div>
 
             <p class="text-sm text-text-muted">
-              Gestión centralizada
+              Acceso seguro
             </p>
           </div>
 
@@ -181,7 +172,7 @@
             ></div>
 
             <p class="text-sm text-text-muted">
-              Acceso seguro
+              Gestión centralizada
             </p>
           </div>
 
